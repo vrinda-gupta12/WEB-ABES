@@ -1,0 +1,267 @@
+* {
+margin: 0;
+padding: 0;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: Arial, sans-serif;
+}
+
+header {
+background: black;
+padding: 10px 30px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: sticky;
+top: 0;
+z-index: 10;
+}
+
+header img {
+height: 60px;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+margin-left: 25px;
+}
+
+nav a:hover {
+color: #e8b4bc;
+}
+
+.home {
+height: 80vh;
+background-image:
+linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+url("https://www.abes.ac.in/assets/2.jpg");
+background-size: cover;
+background-position: center;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+color: white;
+}
+
+.home-text h1 {
+font-family: Georgia, serif;
+font-size: 70px;
+}
+
+.home-text p {
+font-size: 20px;
+width: 600px;
+max-width: 90%;
+margin: 20px auto;
+}
+
+.moving-text {
+background: #f3f3f3;
+overflow: hidden;
+white-space: nowrap;
+}
+
+.moving-text p {
+color: #a51c30;
+font-size: 25px;
+padding: 15px;
+animation: move 15s linear infinite;
+}
+
+@keyframes move {
+from {
+transform: translateX(100%);
+}
+to {
+transform: translateX(-100%);
+}
+}
+
+.glance {
+padding: 50px;
+text-align: center;
+}
+
+.glance h2,
+.about h2,
+.campus h2,
+.placements h2 {
+font-family: Georgia, serif;
+font-size: 45px;
+margin-bottom: 20px;
+}
+
+.glance > p {
+max-width: 700px;
+margin: auto;
+line-height: 1.6;
+}
+
+.numbers {
+display: flex;
+justify-content: space-around;
+margin-top: 40px;
+}
+
+.numbers h3 {
+color: #a51c30;
+font-size: 32px;
+}
+
+/* About */
+.about {
+background: #151515;
+color: white;
+padding: 50px;
+display: flex;
+align-items: center;
+gap: 50px;
+}
+
+.about div {
+flex: 1;
+}
+
+.about p {
+line-height: 1.6;
+margin-bottom: 15px;
+}
+
+.about img {
+width: 40%;
+}
+
+/* Shared intro text for new sections */
+.section-intro {
+max-width: 700px;
+margin: 0 auto 40px auto;
+line-height: 1.6;
+}
+
+/* Campus */
+.campus {
+padding: 60px 50px;
+text-align: center;
+background: white;
+}
+
+.campus-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 30px;
+max-width: 1100px;
+margin: auto;
+}
+
+.campus-card {
+text-align: left;
+border-bottom: 3px solid #a51c30;
+background: #f3f3f3;
+overflow: hidden;
+}
+
+.campus-card img {
+width: 100%;
+height: 200px;
+object-fit: cover;
+display: block;
+}
+
+.campus-card h3 {
+font-family: Georgia, serif;
+font-size: 22px;
+padding: 15px 15px 5px 15px;
+}
+
+.campus-card p {
+padding: 0 15px 20px 15px;
+line-height: 1.5;
+color: #333;
+}
+
+/* Placements */
+.placements {
+padding: 60px 50px;
+text-align: center;
+background: #f3f3f3;
+}
+
+.placement-numbers {
+display: flex;
+justify-content: space-around;
+max-width: 1000px;
+margin: 0 auto 50px auto;
+}
+
+.placement-numbers h3 {
+color: #a51c30;
+font-size: 36px;
+}
+
+.recruiters-title {
+font-family: Georgia, serif;
+font-size: 28px;
+margin-bottom: 20px;
+}
+
+.recruiters {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 15px;
+max-width: 900px;
+margin: auto;
+}
+
+.recruiters span {
+background: white;
+border: 1px solid #a51c30;
+color: #a51c30;
+padding: 12px 28px;
+font-size: 18px;
+font-weight: bold;
+}
+
+/* Footer */
+footer {
+background: black;
+color: white;
+text-align: center;
+padding: 20px;
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+.home-text h1 {
+font-size: 42px;
+}
+.about {
+flex-direction: column;
+}
+.about img {
+width: 100%;
+}
+.numbers,
+.placement-numbers {
+flex-wrap: wrap;
+gap: 25px;
+}
+.numbers > div,
+.placement-numbers > div {
+width: 45%;
+}
+.campus-grid {
+grid-template-columns: 1fr;
+}
+nav a {
+margin-left: 12px;
+font-size: 14px;
+}
+}
